@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Autodiagnóstico RSU – Docentes UPT</title>
+  <meta name="description" content="Autodiagnóstico RSU para autoridades, docentes, investigadores y responsables de RSU de la Universidad Privada de Tacna." />
+  <meta name="theme-color" content="#002060" />
+  <meta name="color-scheme" content="light" />
+  <!-- Performance para Office Forms -->
+  <link rel="dns-prefetch" href="https://forms.office.com" />
+  <link rel="preconnect" href="https://forms.office.com" crossorigin />
+
+  <style>
+    :root{
+      --upt-azul:#002060;
+      --upt-oro:#b4975a;
+      --bg:#f4f4f8;
+      --card:#ffffff;
+      --text:#1c1c1c;
+      --muted:#666;
+      --outline:#8aa8ff;
+      --shadow:0 6px 18px rgba(0,0,0,.08);
+      --radius:14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* Skip link para teclado/lectores */
+    .skip-link{
+      position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+    }
+    .skip-link:focus{
+      position:static; width:auto; height:auto;
+      padding:.5rem .75rem; background:#fff; border:2px solid var(--upt-azul);
+      border-radius:8px; margin:8px; box-shadow:var(--shadow);
+    }
+
+    /* Header */
+    header{
+      background:var(--upt-azul);
+      color:#fff;
+      padding:28px 16px 22px;
+      border-bottom:4px solid var(--upt-oro);
+      text-align:center;
+    }
+    .brand{
+      max-width:1100px; margin:0 auto;
+      display:flex; flex-direction:column; align-items:center; gap:10px;
+    }
+    header img{ width:100px; height:auto; object-fit:contain }
+    header h1{ margin:0; font-size:clamp(20px,2.2vw,24px); letter-spacing:.4px }
+    header .subtitle{ margin:2px 0 0; opacity:.9; font-size:14px }
+
+    /* Main */
+    main{ max-width:1100px; margin:36px auto; padding:0 20px }
+    .title{
+      text-align:center; color:var(--upt-azul);
+      font-size:clamp(20px,2vw,22px); margin:0 0 18px;
+    }
+
+    /* Grid de tarjetas */
+    .grid{
+      display:grid; gap:18px; grid-template-columns:repeat(2,1fr);
+    }
+    @media (max-width:720px){ .grid{ grid-template-columns:1fr } }
+
+    .card{
+      position:relative;
+      background:var(--card);
+      border-radius:var(--radius);
+      border:1px solid #e9e9ef;
+      box-shadow:var(--shadow);
+      padding:20px 18px;
+      display:flex; flex-direction:column; min-height:160px;
+      transition:transform .12s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    @media (hover:hover){
+      .card:hover{ transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.1); border-color:#e1e1ea; }
+    }
+    .card h3{
+      margin:0 0 8px; color:var(--upt-azul);
+      font-size:clamp(17px,1.8vw,19px);
+      display:flex; align-items:center; gap:.5ch;
+    }
+    .card p{ margin:0 0 16px; color:#3f3f3f; font-size:15px }
+
+    /* Botón + stretched link */
+    .btn{
+      margin-top:auto; align-self:flex-start;
+      display:inline-flex; align-items:center; gap:.6ch;
+      text-decoration:none; background:var(--upt-azul); color:#fff;
+      font-weight:700; font-size:15px; padding:10px 16px;
+      border-radius:10px; border:1px solid transparent;
+      transition:transform .06s ease, background .2s ease, box-shadow .2s ease;
+      position:relative; z-index:1;
+    }
+    .btn:hover{ background:var(--upt-oro) }
+    .btn:active{ transform:translateY(1px) }
+    .btn:focus-visible{ outline:3px solid var(--outline); outline-offset:3px }
+    .btn.stretch::after{ content:""; position:absolute; inset:-18px; z-index:-1 }
+
+    /* Botón secundario (volver) */
+    .btn-secondary{
+      background:#fff; color:var(--upt-azul);
+      border-color:#d9d9e2; border-width:1px; border-style:solid;
+    }
+    .btn-secondary:hover{ background:#f3f4fb; color:var(--upt-azul) }
+
+    /* Footer */
+    footer{
+      text-align:center; color:var(--muted); font-size:13px;
+      padding:28px 12px 36px;
+    }
+
+    /* Preferencias de usuario */
+    @media (prefers-contrast:more){ .card{ border-color:#cfcfe6 } .btn{ border-color:#000 } }
+    @media (prefers-reduced-motion:reduce){ .card,.btn{ transition:none } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header role="banner">
+    <div class="brand">
+      <img src="Escudo.png" alt="Escudo de la Universidad Privada de Tacna" />
+      <h1>UNIVERSIDAD PRIVADA DE TACNA</h1>
+      <p class="subtitle">Responsabilidad Social Universitaria</p>
+    </div>
+  </header>
+
+  <main id="contenido" role="main">
+    <h2 class="title">Formularios del Autodiagnóstico RSU - 2025</h2>
+
+    <section class="grid" aria-label="Listado de formularios para docentes">
+      <!-- AUTORIDADES -->
+      <article class="card">
+        <h3>🏛️ Autoridades</h3>
+        <p>Dirigido a las autoridades académicas y administrativas de la UPT.</p>
+        <a class="btn stretch" href="https://forms.office.com/r/Qx7R8Gm1Q7"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir formulario para Autoridades en nueva pestaña">
+          Acceder al Formulario
+        </a>
+      </article>
+
+      <!-- DOCENTES -->
+      <article class="card">
+        <h3>👩‍🏫 Docentes</h3>
+        <p>Dirigido a los docentes de la Universidad Privada de Tacna.</p>
+        <a class="btn stretch" href="https://forms.office.com/r/tqXHTK3QvY"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir formulario para Docentes en nueva pestaña">
+          Acceder al Formulario
+        </a>
+      </article>
+
+      <!-- DOCENTES INVESTIGADORES -->
+      <article class="card">
+        <h3>🔬 Docentes Investigadores</h3>
+        <p>Dirigido a los docentes que realizan labores de investigación.</p>
+        <a class="btn stretch" href="https://forms.office.com/r/mvcXh3xRCt"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Abrir formulario para Docentes Investigadores en nueva pestaña">
+          Acceder al Formulario
+        </a>
+      </article>
+
+      <!-- RESPONSABLES RSU -->
+      <article class="card">
+        <h3>🧭 Responsables de RSU</h3>
+        <p>Dirigido a los responsables de proyectos y acciones de RSU.</p>
+        <a class="btn stretch" href="https://forms.office.com/r/39YtYXqjgW"
+          target="_blank" rel="noopener noreferrer"
+          aria-label="Abrir formulario para Responsables de RSU en nueva pestaña">
+          Acceder al Formulario
+        </a>
+      </article>
+    </section>
+
+    <div style="text-align:center; margin-top:28px;">
+      <!-- Misma pestaña para volver -->
+      <a class="btn btn-secondary" href="index.html" aria-label="Volver al inicio de Autodiagnóstico RSU">← Volver al inicio</a>
+    </div>
+  </main>
+
+  <footer>
+    © Universidad Privada de Tacna – Oficina de Responsabilidad Social Universitaria 2025
+  </footer>
+
+  <noscript>Este portal funciona sin JavaScript. Si lo tienes desactivado, la experiencia seguirá siendo totalmente accesible.</noscript>
+</body>
+</html>
